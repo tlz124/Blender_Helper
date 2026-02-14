@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blender Tools & Resources - Master 3D Creation</title>
+    <link rel="stylesheet" href="Blender.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🔷</span>
+                <span class="logo-text">BlenderHub</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#workflows">Workflows</a></li>
+                <li><a href="#tips">Tips</a></li>
+            </ul>
+            <button class="search-btn" id="searchBtn">
+                <span>🔍</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-content">
+            <button class="close-search" id="closeSearch">&times;</button>
+            <input type="text" id="searchInput" placeholder="Search tools, tutorials, shortcuts..." class="search-input">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Master Blender's Essential Tools</h1>
+            <p class="hero-subtitle">Your comprehensive guide to common workflows, tools, and techniques in Blender 3D</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('tools').scrollIntoView({behavior: 'smooth'})">
+                    Explore Tools
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('workflows').scrollIntoView({behavior: 'smooth'})">
+                    View Workflows
+                </button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-cube"></div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Essential Tools</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Workflows</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Keyboard Shortcuts</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <h2 class="section-title">Essential Blender Tools</h2>
+            <p class="section-subtitle">Master the most commonly used tools and features</p>
+
+            <!-- Tool Categories Filter -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-category="all">All Tools</button>
+                <button class="filter-tab" data-category="modeling">Modeling</button>
+                <button class="filter-tab" data-category="materials">Materials</button>
+                <button class="filter-tab" data-category="lighting">Lighting</button>
+                <button class="filter-tab" data-category="animation">Animation</button>
+                <button class="filter-tab" data-category="rendering">Rendering</button>
+            </div>
+
+            <!-- Tools Grid -->
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tools will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflows Section -->
+    <section class="workflows-section" id="workflows">
+        <div class="container">
+            <h2 class="section-title">Common Workflows</h2>
+            <p class="section-subtitle">Step-by-step guides for popular Blender tasks</p>
+
+            <div class="workflows-grid">
+                <div class="workflow-card">
+                    <div class="workflow-icon">📦</div>
+                    <h3>Basic Modeling</h3>
+                    <p>Learn to create and manipulate 3D objects using primitives and modifiers</p>
+                    <ul class="workflow-steps">
+                        <li>Add primitive shapes</li>
+                        <li>Use Edit mode tools</li>
+                        <li>Apply modifiers</li>
+                        <li>Export your model</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="workflow-icon">🎨</div>
+                    <h3>Material Creation</h3>
+                    <p>Design realistic materials using Shader Editor and nodes</p>
+                    <ul class="workflow-steps">
+                        <li>Open Shader Editor</li>
+                        <li>Add shader nodes</li>
+                        <li>Connect and configure</li>
+                        <li>Preview in viewport</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="workflow-icon">💡</div>
+                    <h3>Scene Lighting</h3>
+                    <p>Set up professional lighting for your 3D scenes</p>
+                    <ul class="workflow-steps">
+                        <li>Add light sources</li>
+                        <li>Adjust intensity & color</li>
+                        <li>Use HDRI environments</li>
+                        <li>Fine-tune shadows</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="workflow-icon">🎬</div>
+                    <h3>Basic Animation</h3>
+                    <p>Bring your models to life with keyframe animation</p>
+                    <ul class="workflow-steps">
+                        <li>Set keyframes</li>
+                        <li>Use timeline editor</li>
+                        <li>Adjust interpolation</li>
+                        <li>Render animation</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="workflow-icon">🖼️</div>
+                    <h3>Rendering Setup</h3>
+                    <p>Configure render settings for high-quality output</p>
+                    <ul class="workflow-steps">
+                        <li>Choose render engine</li>
+                        <li>Set resolution & samples</li>
+                        <li>Configure output format</li>
+                        <li>Optimize render time</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="workflow-icon">✂️</div>
+                    <h3>UV Unwrapping</h3>
+                    <p>Prepare models for texturing with proper UV maps</p>
+                    <ul class="workflow-steps">
+                        <li>Mark seams</li>
+                        <li>Unwrap mesh</li>
+                        <li>Optimize UV layout</li>
+                        <li>Apply textures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section" id="tips">
+        <div class="container">
+            <h2 class="section-title">Pro Tips & Shortcuts</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>⌨️ Essential Shortcuts</h3>
+                    <div class="shortcut-list">
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">G</span>
+                            <span class="shortcut-desc">Grab/Move</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">R</span>
+                            <span class="shortcut-desc">Rotate</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">S</span>
+                            <span class="shortcut-desc">Scale</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Tab</span>
+                            <span class="shortcut-desc">Toggle Edit Mode</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">Shift+A</span>
+                            <span class="shortcut-desc">Add Object</span>
+                        </div>
+                        <div class="shortcut-item">
+                            <span class="shortcut-key">X</span>
+                            <span class="shortcut-desc">Delete</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <h3>💡 Quick Tips</h3>
+                    <ul class="tips-list">
+                        <li>Use Ctrl+Z to undo mistakes</li>
+                        <li>Press Z for shading mode menu</li>
+                        <li>Numpad controls camera views</li>
+                        <li>Alt+A deselects everything</li>
+                        <li>Shift+D duplicates objects</li>
+                        <li>F12 renders current frame</li>
+                    </ul>
+                </div>
+
+                <div class="tip-card">
+                    <h3>🎯 Best Practices</h3>
+                    <ul class="tips-list">
+                        <li>Save frequently (Ctrl+S)</li>
+                        <li>Name your objects clearly</li>
+                        <li>Use collections to organize</li>
+                        <li>Apply transformations when needed</li>
+                        <li>Keep polygon count optimized</li>
+                        <li>Test renders before final output</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Detail Modal -->
+    <div class="tool-modal" id="toolModal">
+        <div class="tool-modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="tool-modal-body" id="toolModalBody">
+                <!-- Content populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BlenderHub</h3>
+                    <p>Your comprehensive resource for mastering Blender 3D</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#workflows">Workflows</a></li>
+                        <li><a href="#tips">Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://www.blender.org" target="_blank">Official Blender Site</a></li>
+                        <li><a href="https://docs.blender.org" target="_blank">Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlenderHub. Educational resource for Blender users.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Blender.js"></script>
+</body>
+</html>
