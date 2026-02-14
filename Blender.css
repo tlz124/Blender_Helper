@@ -731,49 +731,216 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .tools-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
+    /* Navigation */
+    .nav-container {
+        padding: 0 15px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Hero Section */
     .hero {
         flex-direction: column;
-        padding: 3rem 1rem;
+        padding: 3rem 1.5rem;
+        text-align: center;
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
-
-    .nav-menu {
-        gap: 1rem;
-        font-size: 0.9rem;
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
     }
-
-    .tools-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .workflows-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .tips-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .filter-tabs {
-        gap: 0.5rem;
-    }
-
-    .filter-tab {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+    
+    .btn {
+        width: 100%;
     }
 
     .floating-cube {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Stats */
+    .stats .container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    /* Sections */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* Filter Tabs */
+    .filter-tabs {
+        gap: 0.5rem;
+        padding: 0 10px;
+    }
+
+    .filter-tab {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    /* Tools Grid */
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .tool-card {
+        padding: 1.25rem;
+    }
+
+    /* Workflows Grid */
+    .workflows-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .workflow-card {
+        padding: 1.5rem;
+    }
+
+    /* Tips Grid */
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .tip-card {
+        padding: 1.5rem;
+    }
+    
+    /* Shortcuts */
+    .shortcut-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .shortcut-key {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Modal */
+    .tool-modal-content {
+        max-width: 95%;
+        max-height: 90vh;
+    }
+    
+    .tool-modal-body {
+        padding: 1.5rem;
+    }
+    
+    .tool-modal-body h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Search Modal */
+    .search-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-section ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+    
+    .filter-tab {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .tool-icon {
+        font-size: 2rem;
+    }
+    
+    .workflow-icon {
+        font-size: 2.5rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.95rem;
+    }
+    
+    .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .nav-menu {
+        gap: 0.75rem;
+        font-size: 0.85rem;
     }
 }
 
